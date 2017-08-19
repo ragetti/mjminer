@@ -39,7 +39,8 @@
 #include "helper.h"
 
 // Leave 5GB free space
-#define FREE_SPACE	(unsigned long long)5 * 1000 * 1000 * 1000
+//#define FREE_SPACE	(unsigned long long)5 * 1000 * 1000 * 1000
+#define FREE_SPACE      (unsigned long long)5 * 1024 * 1024 * 1024
 #define DEFAULTDIR	"plots/"
 
 // Not to be changed below this
@@ -566,8 +567,11 @@ int main(int argc, char **argv) {
 			printf("Not enough free space on device\n");
 			exit(-1);
 		}
+		printf("Using whole drive, found %llu block(s)\n", fs);
 		fs -= FREE_SPACE;
-				
+		
+		printf("Optimzied to %llu block(s)\n", fs);
+
 		nonces = (unsigned long long)(fs / PLOT_SIZE);
 	}
 
