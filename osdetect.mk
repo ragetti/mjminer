@@ -27,15 +27,15 @@ else
 		ARCH=$(shell uname -m)
 	endif
 
-	ifeq ($(ARCH),x86_64)
+#	ifeq ($(ARCH),x86_64)
 		OSFLAGS += -D AMD64
 		OS_64BIT=1
-	endif
-	ifneq ($(filter %86,$(ARCH)),)
-		OSFLAGS += -D IA32
-		OS_32BIT=1
-	endif
-	ifneq ($(filter arm%,$(ARCH)),)
-		OSFLAGS += -D ARM
-	endif
+#	endif
+#	ifneq ($(filter %86,$(ARCH)),)
+#		OSFLAGS += -D IA32
+#		OS_32BIT=1
+#	endif
+#	ifneq ($(filter arm%,$(ARCH)),)
+#		OSFLAGS += -D ARM
+#	endif
 endif
