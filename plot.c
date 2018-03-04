@@ -40,7 +40,8 @@
 
 // Leave 5GB free space
 //#define FREE_SPACE	(unsigned long long)5 * 1000 * 1000 * 1000
-#define FREE_SPACE      (unsigned long long)5 * 1024 * 1024 * 1024
+// 5k free
+#define FREE_SPACE      (unsigned long long)5 * 1024 
 #define DEFAULTDIR	"plots/"
 
 // Not to be changed below this
